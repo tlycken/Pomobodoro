@@ -1,16 +1,9 @@
-import React, {PropTypes} from 'react';
-import {connect} from 'react-redux';
+import React from 'react';
+import Settings from './settings/popup';
 
-const App = (props) => (
-  <div className="root">
-    Hello, react!
+export default (props) => (
+  <div id="content">
+    <h1>Hello, react!</h1>
+    <p><Settings linkText={<i className="glyphicon glyphicon-wrench" />} /></p>
   </div>
 );
-
-App.propTypes = {
-  showSettings: PropTypes.bool.isRequired,
-  settings: PropTypes.object.isRequired,
-  children: PropTypes.object.isRequired
-};
-
-export default App;
