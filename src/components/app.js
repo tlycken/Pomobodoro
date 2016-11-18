@@ -1,19 +1,16 @@
 import React, {PropTypes} from 'react';
-import Navigation from './common/navigation';
+import {connect} from 'react-redux';
 
-class App extends React.Component {
-    render() {
-        return (
-            <div className="root">
-                <Navigation/>
-                {this.props.children}
-            </div>
-        );
-    }
-}
+const App = (props) => (
+  <div className="root">
+    Hello, react!
+  </div>
+);
 
 App.propTypes = {
-    children: PropTypes.object.isRequired
+  showSettings: PropTypes.bool.isRequired,
+  settings: PropTypes.object.isRequired,
+  children: PropTypes.object.isRequired
 };
 
 export default App;
